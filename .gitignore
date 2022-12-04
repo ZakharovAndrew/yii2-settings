@@ -1,6 +1,8 @@
-assets/*
-!assets/.gitignore
-protected/runtime/*
-!protected/runtime/.gitignore
-protected/data/*.db
-themes/classic/views/
+.DS_Store
+/vendor
+/composer.lock
+/build
+/nbproject
+/.idea
+/phpunit.xml
+/.php_cs.cache
