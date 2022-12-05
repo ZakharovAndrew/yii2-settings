@@ -34,8 +34,7 @@ class Settings extends \yii\db\ActiveRecord
             [['title', 'type', 'setting_group_id', 'key'], 'required'],
             [['setting_group_id'], 'integer'],
             [['value'], 'string'],
-            [['title', 'description', 'type', 'key'], 'string', 'max' => 255],
-            [['key'], 'unique'],
+            [['title', 'description', 'type', 'key'], 'string', 'max' => 255]
         ];
     }
 
