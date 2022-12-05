@@ -17,6 +17,8 @@ use Yii;
  */
 class Settings extends \yii\db\ActiveRecord
 {
+    const CACHE_TIME = 3600;
+    
     /**
      * {@inheritdoc}
      */
@@ -58,7 +60,7 @@ class Settings extends \yii\db\ActiveRecord
     /**
      * Group settings by group ID.
      */
-	public static function groupByGroup()
+    public static function groupByGroup()
     {
         $settings = self::find()->orderBy('pos')->all();
         $result = [];
@@ -68,5 +70,19 @@ class Settings extends \yii\db\ActiveRecord
         
         return $result;
     }
-
+    
+    /**
+     * Group settings by group ID with keys.
+     */
+    public static function getGroupKeys()
+    {
+        return Yii::$app->cache->getOrSet('settings_group_keys', function () {
+            $settings = self::find()->orderBy('pos')->all();
+            $result = [];
+            foreach ($settings as $setting) {
+                $result[$setting->setting_groups_id][$setting->key] = $setting->value;
+            }
+        }, self::CACHE_TIME);
+    }
+    
 }
