@@ -17,7 +17,7 @@ class m221204_085911_create_settings_table extends Migration
                 'description' => $this->string(),
                 'type' => $this->string()->notNull(),
                 'setting_group_id' => $this->integer()->notNull(),
-                'key' => $this->string()->notNull()->unique(),
+                'key' => $this->string()->notNull(),
                 'value' => $this->text(),
             ]
         );
