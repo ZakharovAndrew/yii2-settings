@@ -34,7 +34,8 @@ class Settings extends \yii\db\ActiveRecord
             [['title', 'type', 'setting_group_id', 'key'], 'required'],
             [['setting_group_id'], 'integer'],
             [['value'], 'string'],
-            [['title', 'description', 'type', 'key'], 'string', 'max' => 255]
+            [['title', 'description', 'type', 'key'], 'string', 'max' => 255],
+            [['key'], 'unique'],
         ];
     }
 
@@ -53,4 +54,19 @@ class Settings extends \yii\db\ActiveRecord
             'value' => 'Value',
         ];
     }
+	
+    /**
+     * Group settings by group ID.
+     */
+	public static function groupByGroup()
+    {
+        $settings = self::find()->orderBy('pos')->all();
+        $result = [];
+        foreach ($settings as $setting) {
+            $result[$setting->setting_groups_id][] = $setting;
+        }
+        
+        return $result;
+    }
+
 }
