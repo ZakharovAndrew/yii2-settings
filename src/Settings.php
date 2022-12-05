@@ -4,7 +4,7 @@ namespace ZakharovAndrew\settings;
 
 use Yii;
 
-class Setting extends \yii\base\Component
+class Settings extends \yii\base\Component
 {
     public function get($group_name, $key)
     {
@@ -16,5 +16,4 @@ class Setting extends \yii\base\Component
         
         return $settings[$group_name][$key] ?? null;
     }
-
 }
