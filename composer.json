@@ -16,7 +16,7 @@
   },
   "autoload": {
     "psr-4": {
-      "surveyforms\\survey\\": "src"
+      "ZakharovAndrew\\settings\\": "src"
     }
   },
   "fxp-asset": {
