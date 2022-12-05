@@ -25,3 +25,14 @@ Subsequently, run
 ```
 
 in order to create the settings table in your database.
+
+
+##  Config config/main.php to use Yii::$app->settings
+
+```
+    'components' => [
+        'settings' => [
+            'class' => 'ZakharovAndrew\settings\Settings',
+        ],
+    ],
+```
