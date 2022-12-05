@@ -4,7 +4,6 @@ use yii\db\Migration;
 
 /**
  * Handles the creation of table `settings`.
- * 
  */
 class m221204_085911_create_settings_table extends Migration
 {
