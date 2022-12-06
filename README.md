@@ -36,3 +36,18 @@ in order to create the settings table in your database.
         ],
     ],
 ```
+
+## Usage
+
+Typical component usage
+
+$settings = Yii::$app->settings;
+
+$valueList = $settings->get('group1');
+
+$value = $settings->get('group1', 'key');
+
+$settings->set('group1', 'key', 'value');
+
+// Automatically called on set();
+$settings->clearCache();
