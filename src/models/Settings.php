@@ -77,12 +77,33 @@ class Settings extends \yii\db\ActiveRecord
     public static function getGroupKeys()
     {
         return Yii::$app->cache->getOrSet('settings_group_keys', function () {
-            $settings = self::find()->orderBy('pos')->all();
+            $settings = self::find()->orderBy('id')->all();
             $result = [];
             foreach ($settings as $setting) {
-                $result[$setting->setting_groups_id][$setting->key] = $setting->value;
+                $result[$setting->setting_group_id][$setting->key] = $setting->value;
             }
+            return $result;
         }, self::CACHE_TIME);
     }
+    
+    public static function clearCache()
+    {
+        Yii::$app->cache->delete('settings_group_keys');
+    }
+    
+    public function afterSave($insert, $changedAttributes)
+    {
+        parent::afterSave($insert, $changedAttributes);
+        static::clearCache();
+    }
+
+    /**
+     * Delete setting and clear cache
+     */
+    public function afterDelete() {
+        parent::afterDelete();
+        static::clearCache();
+    }
+
     
 }
