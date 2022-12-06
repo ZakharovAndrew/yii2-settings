@@ -12,8 +12,14 @@ class Settings extends \yii\base\Component
             return;
         }
         
-        $settings = \ZakharovAndrew\settings\models\Setting::getGroupKeys();
+        $settings = \ZakharovAndrew\settings\models\Settings::getGroupKeys();
         
         return $settings[$group_name][$key] ?? null;
     }
+    
+    public function clearCache()
+    {
+        return \ZakharovAndrew\settings\models\Settings::clearCache();
+    }
+    
 }
