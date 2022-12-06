@@ -41,6 +41,7 @@ in order to create the settings table in your database.
 
 Typical component usage
 
+```
 $settings = Yii::$app->settings;
 
 $valueList = $settings->get('group1');
@@ -51,3 +52,4 @@ $settings->set('group1', 'key', 'value');
 
 // Automatically called on set();
 $settings->clearCache();
+```
