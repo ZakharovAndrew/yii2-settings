@@ -37,6 +37,17 @@ in order to create the settings table in your database.
     ],
 ```
 
+and for work controller 
+
+```
+    'modules' => [
+        'settings' => [
+            'class' => 'ZakharovAndrew\settings\Module',
+        ],
+        // ...
+    ],
+```
+
 ## Usage
 
 Typical component usage
