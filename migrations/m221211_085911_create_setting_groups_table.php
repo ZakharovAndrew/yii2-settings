@@ -3,14 +3,14 @@
 use yii\db\Migration;
 
 /**
- * Handles the creation of table `settings`.
+ * Handles the creation of table `setting_groups`.
  */
-class m221211_085911_create_setting_gorups_table extends Migration
+class m221211_085911_create_setting_groups_table extends Migration
 {
     public function up()
     {
         $this->createTable(
-            'setting_gorups',
+            'setting_groups',
             [
                 'id' => $this->primaryKey(),
                 'title' => $this->string()->notNull(),
@@ -21,14 +21,14 @@ class m221211_085911_create_setting_gorups_table extends Migration
         // creates index for column `key`
         $this->createIndex(
             'idx-setting-groups-key',
-            'setting_gorups',
+            'setting_groups',
             'key'
         );
     }
 
     public function down()
     {
-        $this->dropTable('setting_gorups');
+        $this->dropTable('setting_groups');
         return true;
     }
 }
