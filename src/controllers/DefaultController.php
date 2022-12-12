@@ -42,7 +42,7 @@ class DefaultController extends Controller
     public function actionIndex()
     {
         return $this->render('index', [
-            'groups' => SettingGroups::find()->orderBy('pos ASC')->all(),
+            'groups' => SettingGroups::find()->orderBy('id ASC')->all(),
             'settings' => Settings::groupByGroup()
         ]);
     }
