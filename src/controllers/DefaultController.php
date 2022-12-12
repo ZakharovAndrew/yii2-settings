@@ -11,7 +11,7 @@ use ZakharovAndrew\settings\models\SettingsSearch;
 use ZakharovAndrew\settings\models\SettingGroups;
 
 /**
- * SettingsController implements the CRUD actions for Settings model.
+ * DefaultController implements the CRUD actions for Settings model.
  * @author Andrew Zakharov https://github.com/ZakharovAndrew
  */
 class DefaultController extends Controller
