@@ -62,10 +62,10 @@ class Settings extends \yii\db\ActiveRecord
      */
     public static function groupByGroup()
     {
-        $settings = self::find()->orderBy('pos')->all();
+        $settings = self::find()->orderBy('id')->all();
         $result = [];
         foreach ($settings as $setting) {
-            $result[$setting->setting_groups_id][] = $setting;
+            $result[$setting->setting_group_id][] = $setting;
         }
         
         return $result;
