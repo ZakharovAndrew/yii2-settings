@@ -14,7 +14,7 @@ use ZakharovAndrew\settings\models\SettingGroups;
  * SettingsController implements the CRUD actions for Settings model.
  * @author Andrew Zakharov https://github.com/ZakharovAndrew
  */
-class SettingsController extends Controller
+class DefaultController extends Controller
 {
     /**
      * @inheritDoc
