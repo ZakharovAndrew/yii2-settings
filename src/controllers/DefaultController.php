@@ -2,15 +2,17 @@
 
 namespace ZakharovAndrew\settings\controllers;
 
-use ZakharovAndrew\models\Settings;
-use ZakharovAndrew\models\SettingsSearch;
-use ZakharovAndrew\models\SettingGroups;
-use yii\web\Controller;
-use yii\web\NotFoundHttpException;
+use Yii;
 use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
+use yii\web\Controller;
+use ZakharovAndrew\settings\models\Settings;
+use ZakharovAndrew\settings\models\SettingsSearch;
+use ZakharovAndrew\settings\models\SettingGroups;
 
 /**
  * SettingsController implements the CRUD actions for Settings model.
+ * @author Andrew Zakharov https://github.com/ZakharovAndrew
  */
 class SettingsController extends Controller
 {
