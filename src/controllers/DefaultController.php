@@ -43,6 +43,7 @@ class DefaultController extends Controller
     {
         return $this->render('index', [
             'groups' => SettingGroups::find()->orderBy('id ASC')->all(),
+            'bootstrapVersion' => Yii::$app->getModule('settings')->bootstrapVersion,
             'settings' => Settings::groupByGroup()
         ]);
     }
@@ -69,12 +70,15 @@ class DefaultController extends Controller
     {
         $model = new Settings();
         if($group_id) {
-            $model->setting_groups_id = $group_id;
+            $model->setting_group_id = $group_id;
         }
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
+                Yii::$app->session->setFlash('success', "Настройки добавлена");
                 return $this->redirect(['index']);
+            } else {
+                Yii::$app->session->setFlash('error', "Ошибка добавления настроек".var_export($model->errors, true));
             }
         } else {
             $model->loadDefaultValues();
