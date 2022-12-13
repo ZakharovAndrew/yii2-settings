@@ -3,20 +3,20 @@
 use yii\helpers\Html;
 
 /** @var yii\web\View $this */
-/** @var ZakharovAndrew\settings\models\Settings $model */
+/** @var app\models\SettingGroups $model */
 
-$this->title = 'Добавить настройку';
+$this->title = 'Добавить группу настроек';
 $this->params['breadcrumbs'][] = ['label' => 'Настройки', 'url' => ['/settings']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="settings-create">
+<div class="setting-groups-create">
 
-    <?= $this->render( '_custom_breadcrumbs', [
+    <?= $this->render( '/default/_custom_breadcrumbs', [
         'bootstrapVersion' => $bootstrapVersion,
     ]) ?>
-    
-    <?= $this->render( $bootstrapVersion == 5 ? '_form_bootstrap5' : '_form', [
+
+    <?= $this->render('_form', [
         'model' => $model,
     ]) ?>
-    
+
 </div>
