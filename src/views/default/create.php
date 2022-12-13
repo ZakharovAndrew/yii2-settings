@@ -11,8 +11,8 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="settings-create">
 
-    <?= $this->render('_form', [
+    <?= $this->render( $bootstrapVersion == 5 ? '_form_bootstrap5' : '_form', [
         'model' => $model,
     ]) ?>
-
+    
 </div>

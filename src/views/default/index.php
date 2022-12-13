@@ -2,9 +2,6 @@
 
 use ZakharovAndrew\settings\models\Settings;
 use yii\helpers\Html;
-use yii\helpers\Url;
-use yii\grid\ActionColumn;
-use yii\grid\GridView;
 
 /** @var yii\web\View $this */
 /** @var ZakharovAndrew\settings\models\SettingsSearch $searchModel */
@@ -14,7 +11,6 @@ $this->title = 'Настройки';
 $this->params['breadcrumbs'][] = $this->title;
 $this->params['button'] = Html::a('Добавить группу', ['/setting-groups/create'], ['class' => 'btn btn-success']);
 ?>
-<style>
 <style>
     body {
         background-color: #f8f9fa;
@@ -33,6 +29,7 @@ $this->params['button'] = Html::a('Добавить группу', ['/setting-gr
     .edit-settings-group {color:#fff;padding-right:15px}
     .setting-header:hover .edit-settings-group {
         display:inline-block;;
+        color: #fffffff5;
     }
     .btn-setting-group {
         font-size: 14px;
@@ -44,16 +41,19 @@ $this->params['button'] = Html::a('Добавить группу', ['/setting-gr
     .btn-setting-group:hover {
         background-color: #0000006e;border: 1px solid #00000063;
     }
-    .setting-group-body, .setting-group {
+    .setting-group-body, .setting-group, .form {
         border-radius:6px;background:#fff;
     }
     .setting-group-body::after {
         clear: both;
         content: '';
     }
-    .setting-group {
+    .setting-group, .form {
         margin-bottom: 15px;
         box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+    }
+    .setting-header .edit-settings-group:hover {
+        color: #fff;
     }
     .row-settings {
         padding:15px;
@@ -71,12 +71,15 @@ $this->params['button'] = Html::a('Добавить группу', ['/setting-gr
     }
     .col-md-2 {padding-top:6px}
     .col-md-2 a {color:#919191;padding-right:4px}
-    .col-md-2 a:hover {color:#5ac08d;
+    .col-md-2 a:hover {color:#9c27b0;}
     .edit-settings {
         top:10px
     }
+    
 </style>
 <div class="settings-index">
+    
+    <h1><?= Html::encode($this->title) ?></h1>
 
     <?php foreach ($groups as $group) {?>
     <div class="setting-group">

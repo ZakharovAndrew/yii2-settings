@@ -18,7 +18,8 @@ class Module extends \yii\base\Module
      * @var string
      */
     public $urlPrefix = 'admin';
-    const VERSION = '0.1.0';
+    
+    public $bootstrapVersion = '';
     
     /**
      * @inheritdoc

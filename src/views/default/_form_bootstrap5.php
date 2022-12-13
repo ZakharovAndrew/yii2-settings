@@ -1,7 +1,7 @@
 <?php
 
-use yii\helpers\Html;
-use yii\widgets\ActiveForm;
+use yii\bootstrap5\ActiveForm;
+use yii\bootstrap5\Html;
 
 /** @var yii\web\View $this */
 /** @var ZakharovAndrew\settings\models\Settings $model */
@@ -24,7 +24,6 @@ use yii\widgets\ActiveForm;
 </style>
 
 <div class="settings-form">
-
     <?php $form = ActiveForm::begin(); ?>
 
     <div class="form">

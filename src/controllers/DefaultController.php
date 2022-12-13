@@ -81,6 +81,7 @@ class DefaultController extends Controller
         }
 
         return $this->render('create', [
+            'bootstrapVersion' => Yii::$app->getModule('settings')->bootstrapVersion,
             'model' => $model,
         ]);
     }
@@ -101,6 +102,7 @@ class DefaultController extends Controller
         }
 
         return $this->render('update', [
+            'bootstrapVersion' => Yii::$app->getModule('settings')->bootstrapVersion,
             'model' => $model,
         ]);
     }
