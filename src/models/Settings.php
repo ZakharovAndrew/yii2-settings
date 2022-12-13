@@ -33,9 +33,9 @@ class Settings extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'type', 'setting_group_id', 'key'], 'required'],
+            [['title', 'setting_group_id', 'key'], 'required'],
             [['setting_group_id'], 'integer'],
-            [['value'], 'string'],
+            [['value', 'type'], 'string'],
             [['title', 'description', 'type', 'key'], 'string', 'max' => 255],
             [['key'], 'unique'],
         ];
