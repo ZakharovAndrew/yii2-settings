@@ -3,6 +3,7 @@
 namespace ZakharovAndrew\settings\models;
 
 use Yii;
+use ZakharovAndrew\settings\Module;
 
 /**
  * This is the model class for table "setting_groups".
@@ -42,9 +43,9 @@ class SettingGroups extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'key' => 'Key',
-            'position' => 'Position'
+            'title' => Module::t('Title'),
+            'key' => Module::t('Key'),
+            'position' => Module::t('Position')
         ];
     }
 }

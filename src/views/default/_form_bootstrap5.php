@@ -2,6 +2,7 @@
 
 use yii\bootstrap5\ActiveForm;
 use yii\bootstrap5\Html;
+use ZakharovAndrew\settings\Module;
 
 /** @var yii\web\View $this */
 /** @var ZakharovAndrew\settings\models\Settings $model */
@@ -26,7 +27,7 @@ use yii\bootstrap5\Html;
     </div>
 
     <div class="form-group">
-        <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton(Module::t('Save'), ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

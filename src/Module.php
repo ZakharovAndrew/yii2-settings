@@ -75,8 +75,9 @@ class Module extends \yii\base\Module
      * @param null $language
      * @return string
      */
-    public static function t($category, $message, $params = [], $language = null)
+    public static function t($message, $params = [], $language = null)
     {
+        $category = 'settings';
         return Yii::t('extension/yii2-settings/' . $category, $message, $params, $language);
     }
     

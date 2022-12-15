@@ -1,12 +1,13 @@
 <?php
 
 use yii\helpers\Html;
+use ZakharovAndrew\settings\Module;
 
 /** @var yii\web\View $this */
 /** @var app\models\Settings $model */
 
-$this->title = 'Настройка: ' . $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'Настройки', 'url' => ['/settings']];
+$this->title = Module::t('Setting') . ': ' . $model->title;
+$this->params['breadcrumbs'][] = ['label' => Module::t('Settings'), 'url' => ['/settings']];
 ?>
 <div class="settings-update">
 

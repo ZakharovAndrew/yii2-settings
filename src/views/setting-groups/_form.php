@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use ZakharovAndrew\settings\Module;
 
 /** @var yii\web\View $this */
 /** @var app\models\SettingGroups $model */
@@ -16,10 +17,12 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'key')->textInput(['maxlength' => true]) ?>
+        
+    <?= $form->field($model, 'position')->textInput(['maxlength' => true]) ?>
     </div>
     
     <div class="form-group">
-        <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton(Module::t('Save'), ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

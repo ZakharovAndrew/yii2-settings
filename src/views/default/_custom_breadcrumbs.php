@@ -13,12 +13,12 @@ use yii\helpers\Html;
         font-weight: bold;
         border-radius:6px 6px 0 0;
     }
-    .edit-settings-group {
+    .edit-settings-group, .delete-settings-group {
         display:none;
         float:right;
     }
-    .edit-settings-group {color:#fff;padding-right:15px}
-    .setting-header:hover .edit-settings-group {
+    .edit-settings-group, .delete-settings-group {color:#fff;padding-right:15px}
+    .setting-header:hover .edit-settings-group, .setting-header:hover .delete-settings-group {
         display:inline-block;;
         color: #fffffff5;
     }
@@ -101,6 +101,9 @@ use yii\helpers\Html;
         border: 1px solid #00000036;
         float: right;
         padding: 0px 6px 2px;
+    }
+    .edit-settings-group {
+        padding-right: 10px;
     }
 </style>
 <div class="row page-header">
