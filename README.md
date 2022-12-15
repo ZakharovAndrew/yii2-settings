@@ -26,18 +26,11 @@ Subsequently, run
 
 in order to create the settings table in your database.
 
+## Usage
 
-##  Config config/web.php to use Yii::$app->settings
+There are 2 parts to this extension. A module and a component. The module provides a simple GUI to edit your settings. The component provides a way to retrieve and save settings programmatically.
 
-```
-    'components' => [
-        'settings' => [
-            'class' => 'ZakharovAndrew\settings\Settings',
-        ],
-    ],
-```
-
-and for work controller 
+Add this to your main configuration's modules array
 
 ```
     'modules' => [
@@ -48,7 +41,15 @@ and for work controller
     ],
 ```
 
-## Usage
+Add this to your main configuration's components array
+
+```
+    'components' => [
+        'settings' => [
+            'class' => 'ZakharovAndrew\settings\Settings',
+        ],
+    ],
+```
 
 Typical component usage
 
