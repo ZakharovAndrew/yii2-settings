@@ -34,6 +34,7 @@ return [
     'Setting' => 'Настройка',
     'Settings' => 'Настройки',
     'Create Setting group' => 'Добавить группу',
+    'Setting Group ID' => 'ID группы настроек',
     'Save' => 'Сохранить',
     'Type' => 'Тип',
     'Update' => 'Редактировать',
