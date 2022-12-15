@@ -29,7 +29,7 @@ class SettingGroups extends \yii\db\ActiveRecord
     {
         return [
             [['title', 'key'], 'required'],
-            [['pos',], 'integer'],
+            [['position',], 'integer'],
             [['title', 'key'], 'string', 'max' => 255],
             [['key'], 'unique'],
         ];
@@ -44,7 +44,7 @@ class SettingGroups extends \yii\db\ActiveRecord
             'id' => 'ID',
             'title' => 'Title',
             'key' => 'Key',
-            'pos' => 'Position'
+            'position' => 'Position'
         ];
     }
 }
