@@ -105,6 +105,14 @@ use yii\helpers\Html;
     .edit-settings-group {
         padding-right: 10px;
     }
+    <?php if ($bootstrapVersion != 5) {?>
+    .page-header {
+        margin-top:0px;
+    }
+    h1, .h1 {
+        font-size: 36px !important;
+    }
+    <?php } ?>
 </style>
 <div class="row page-header">
     <div class="col-md-6 col-12">
