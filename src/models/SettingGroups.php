@@ -48,4 +48,11 @@ class SettingGroups extends \yii\db\ActiveRecord
             'position' => Module::t('Position')
         ];
     }
+    
+    public function afterSave($insert, $changedAttributes) {
+        parent::afterSave($insert, $changedAttributes);
+        \app\models\Settings::clearCache();
+    }
+    
+            
 }

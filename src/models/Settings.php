@@ -80,8 +80,9 @@ class Settings extends \yii\db\ActiveRecord
         return Yii::$app->cache->getOrSet('settings_group_keys', function () {
             $settings = self::find()->orderBy('id')->all();
             $result = [];
+            $groups = \yii\helpers\ArrayHelper::map($settings, 'id', 'key');
             foreach ($settings as $setting) {
-                $result[$setting->setting_group_id][$setting->key] = $setting->value;
+                $result[$groups[$setting->id]][$setting->key] = $setting->value;
             }
             return $result;
         }, self::CACHE_TIME);

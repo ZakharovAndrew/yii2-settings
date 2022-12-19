@@ -66,4 +66,14 @@ class SettingGroupsSearch extends SettingGroups
 
         return $dataProvider;
     }
+    
+    /**
+     * Reset cache
+     * @param type $insert
+     * @param type $changedAttributes
+     */
+    public function afterSave($insert, $changedAttributes) {
+        parent::afterSave($insert, $changedAttributes);
+        \app\models\Settings::clearCache();
+    }
 }
