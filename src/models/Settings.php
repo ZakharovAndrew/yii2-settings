@@ -77,7 +77,7 @@ class Settings extends \yii\db\ActiveRecord
      */
     public static function getGroupKeys()
     {
-        return Yii::$app->cache->getOrSet('settings_group_keys11', function () {
+        return Yii::$app->cache->getOrSet('settings_group_keys', function () {
             $settings = self::find()->orderBy('id')->all();
             $result = [];
             $groups = \yii\helpers\ArrayHelper::map(SettingGroups::find()->orderBy('id')->all(), 'id', 'key');
