@@ -49,10 +49,21 @@ class SettingGroups extends \yii\db\ActiveRecord
         ];
     }
     
+    /**
+     * Reset cache
+     * @param type $insert
+     * @param type $changedAttributes
+     */
     public function afterSave($insert, $changedAttributes) {
         parent::afterSave($insert, $changedAttributes);
         \app\models\Settings::clearCache();
     }
     
-            
+    /**
+     * Delete setting group and clear cache
+     */
+    public function afterDelete() {
+        parent::afterDelete();
+        \app\models\Settings::clearCache();
+    }
 }
