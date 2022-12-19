@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Yii2 Settings
+ * *************
+ * Yii2 settings with database module with GUI manager supported.
+ *  
+ * @link https://github.com/ZakharovAndrew/yii2-settings/
+ * @copyright Copyright (c) 2022 Zakharov Andrew
+ */
+
 namespace ZakharovAndrew\settings;
 
 use Yii;
