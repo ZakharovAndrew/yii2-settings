@@ -69,3 +69,7 @@ $settings->set('group1', 'key', 'value');
 // Automatically called on set();
 $settings->clearCache();
 ```
+
+## License
+
+[MIT](https://github.com/ZakharovAndrew/yii2-settings/blob/master/LICENSE) c) 2022, Zakharov Andrew <https://github.com/ZakharovAndrew>.
