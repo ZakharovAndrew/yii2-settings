@@ -56,6 +56,23 @@ Add this to your main configuration's components array
     ],
 ```
 
+Add a new rule for `urlManager` of your application's configuration file, for example:
+
+```php
+'urlManager' => [
+    'rules' => [
+        'settings' => 'settings/default/index',
+        'settings/create' => 'settings/default/create',
+        'settings/update' => 'settings/default/update',
+        'settings/delete' => 'settings/default/delete',
+        'setting-groups/create' => 'settings/setting-groups/create',
+        'setting-groups/update' => 'settings/setting-groups/update',
+        'setting-groups/delete' => 'settings/setting-groups/delete',
+    ],
+],
+```
+
+
 Typical component usage
 
 ```
