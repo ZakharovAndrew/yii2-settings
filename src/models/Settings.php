@@ -91,6 +91,8 @@ class Settings extends \yii\db\ActiveRecord
     public static function clearCache()
     {
         Yii::$app->cache->delete('settings_group_keys');
+	// refresh settings
+	static::getGroupKeys();
     }
     
     public function afterSave($insert, $changedAttributes)
