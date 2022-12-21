@@ -82,7 +82,7 @@ class Settings extends \yii\db\ActiveRecord
             $result = [];
             $groups = \yii\helpers\ArrayHelper::map(SettingGroups::find()->orderBy('id')->all(), 'id', 'key');
             foreach ($settings as $setting) {
-                $result[$groups[$setting->id]][$setting->key] = $setting->value;
+                $result[$groups[$setting->setting_group_id]][$setting->key] = $setting->value;
             }
             return $result;
         }, self::CACHE_TIME);
