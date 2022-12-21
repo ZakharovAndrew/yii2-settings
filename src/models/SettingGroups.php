@@ -56,7 +56,7 @@ class SettingGroups extends \yii\db\ActiveRecord
      */
     public function afterSave($insert, $changedAttributes) {
         parent::afterSave($insert, $changedAttributes);
-        \app\models\Settings::clearCache();
+        ZakharovAndrew\settings\models\Settings::clearCache();
     }
     
     /**
@@ -64,6 +64,6 @@ class SettingGroups extends \yii\db\ActiveRecord
      */
     public function afterDelete() {
         parent::afterDelete();
-        \app\models\Settings::clearCache();
+        ZakharovAndrew\settings\models\Settings::clearCache();
     }
 }
