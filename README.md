@@ -1,10 +1,4 @@
-<p align="center">
-
-        <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
-
-    <h1 align="center">Yii2 Settings</h1>
-    <br>
-</p>
+# Yii2 Settings
 
 [![Latest Stable Version](https://poser.pugx.org/zakharov-andrew/yii2-settings/v/stable)](https://packagist.org/packages/zakharov-andrew/yii2-settings)
 [![License](https://poser.pugx.org/zakharov-andrew/yii2-settings/license)](https://packagist.org/packages/zakharov-andrew/yii2-settings)
