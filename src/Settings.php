@@ -15,13 +15,17 @@ use Yii;
 
 class Settings extends \yii\base\Component
 {
-    public function get($group_name, $key)
+    public function get($group_name, $key = null)
     {
-        if (!$key || !$group_name) {
+        if (!$group_name) {
             return;
         }
         
         $settings = \ZakharovAndrew\settings\models\Settings::getGroupKeys();
+        
+        if (!$key) {
+            return $settings[$group_name] ?? null;
+        }
         
         return $settings[$group_name][$key] ?? null;
     }
