@@ -4,6 +4,7 @@ namespace ZakharovAndrew\settings\models;
 
 use Yii;
 use ZakharovAndrew\settings\Module;
+use ZakharovAndrew\settings\models\Settings;
 
 /**
  * This is the model class for table "setting_groups".
@@ -56,7 +57,7 @@ class SettingGroups extends \yii\db\ActiveRecord
      */
     public function afterSave($insert, $changedAttributes) {
         parent::afterSave($insert, $changedAttributes);
-        ZakharovAndrew\settings\models\Settings::clearCache();
+        Settings::clearCache();
     }
     
     /**
@@ -64,6 +65,6 @@ class SettingGroups extends \yii\db\ActiveRecord
      */
     public function afterDelete() {
         parent::afterDelete();
-        ZakharovAndrew\settings\models\Settings::clearCache();
+        Settings::clearCache();
     }
 }
