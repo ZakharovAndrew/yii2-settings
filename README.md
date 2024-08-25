@@ -76,7 +76,7 @@ Add a new rule for `urlManager` of your application's configuration file, for ex
 
 Typical component usage
 
-```
+```php
 $settings = Yii::$app->settings;
 
 $valueList = $settings->get('group1');
