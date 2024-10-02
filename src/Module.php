@@ -6,7 +6,7 @@
  * Yii2 settings with database module with GUI manager supported.
  *  
  * @link https://github.com/ZakharovAndrew/yii2-settings/
- * @copyright Copyright (c) 2022 Zakharov Andrew
+ * @copyright Copyright (c) 2022-2024 Zakharov Andrew
  */
  
 namespace ZakharovAndrew\settings;
@@ -26,6 +26,11 @@ class Module extends \yii\base\Module
     public $urlPrefix = 'admin';
     
     public $bootstrapVersion = '';
+
+    /**
+     * @var string show H1
+     */
+    public $showTitle = true;
     
     /**
      *
