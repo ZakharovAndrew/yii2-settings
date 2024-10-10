@@ -28,6 +28,9 @@ class DefaultController extends Controller
                     [
                        'allow' => true,
                         'roles' => ['@'],
+                        'matchCallback' => function ($rule, $action) {
+                            return Yii::$app->user->identity->hasRole('admin');
+                        }
                     ],
                 ],
             ],
